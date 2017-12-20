@@ -131,5 +131,5 @@ if [ "$1" = 'zammad-websocket' ]; then
 
   echo "zammad-websocket" >> ${ZAMMAD_READY_FILE}
 
-  exec gosu ${ZAMMAD_USER}:${ZAMMAD_USER} bundle exec script/websocket-server.rb -b 0.0.0.0 -p 6042 start
+  exec gosu ${ZAMMAD_USER}:${ZAMMAD_USER} bundle exec script/websocket-server.rb -b [::] -p 6042 start
 fi

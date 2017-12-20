@@ -6,9 +6,9 @@ ENV ZAMMAD_DIR /opt/zammad
 ENV ZAMMAD_USER zammad
 ENV RAILS_ENV production
 ENV RAILS_SERVER puma
-ENV PROJECT_URL https://github.com/zammad/zammad
+ENV PROJECT_URL https://github.com/muhammadn/zammad
 ENV GIT_URL ${PROJECT_URL}.git
-ENV GIT_BRANCH stable
+ENV GIT_BRANCH ip6binding
 ENV ZAMMAD_TMP_DIR /tmp/zammad-${GIT_BRANCH}
 ENV TAR_GZ_URL ${PROJECT_URL}/archive/${GIT_BRANCH}.tar.gz
 ENV GOSU_VERSION 1.10
