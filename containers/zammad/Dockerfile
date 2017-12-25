@@ -38,6 +38,9 @@ RUN BUILD_DEPENDENCIES="build-essential ca-certificates curl git libffi-dev libp
 	  && chmod +x /usr/local/bin/gosu \
 	  && gosu nobody true
 
+# cache-bust the below steps as we will update zammad often and need to save bandwidth
+# run with: docker build . -t muhammadn/zammad --build-arg CACHEBUST=$(date +%s)
+ARG CACHEBUST=1
 # install zammad
 RUN groupadd -g 1000 ${ZAMMAD_USER} \
     && useradd -M -d ${ZAMMAD_DIR} -s /bin/bash -u 1000 -g 1000 ${ZAMMAD_USER} \
